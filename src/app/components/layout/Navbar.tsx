@@ -28,7 +28,7 @@ export default function Header() {
             <span>example@gmail.com</span>
           </div>
         </div>
-        <div className="flex items-center gap-4 text-blue-600 text-lg">
+        <div className="flex items-center gap-4 text-blue-600 text-lg cursor-pointer">
           <FaFacebookF />
           <FaInstagram />
           <FaTwitter />

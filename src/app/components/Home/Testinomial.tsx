@@ -80,32 +80,38 @@ export default function TestimonialSlider() {
     };
 
     return (
-        <div className="w-full px-24 py-12 bg-white text-center">
-            <h2 className="text-3xl font-bold mb-8">
-                What Our Customers <span className="text-orange-500">Are Saying?</span>
-            </h2>
-            <Slider {...settings}>
-                {testimonials.map((item, index) => (
-                    <div key={index} className="px-4">
-                        <div className="bg-white p-6 h-full flex flex-col justify-between md:border-b-0 md:border-r-2 md:last:border-r-0 border-gray-100  rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
-                            <p className="text-left text-sm text-gray-600 mb-6">{item.message}</p>
-                            <div className="flex items-center mt-auto">
-                                <Image
-                                    src={item.image}
-                                    alt={item.name}
-                                    width={50}
-                                    height={50}
-                                    className="w-16 h-16 rounded-full object-cover mr-4"
-                                />
-                                <div className="text-left">
-                                    <h4 className="text-blue-700 font-semibold">{item.name}</h4>
-                                    <p className="text-black text-sm font-bold">{item.position}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </Slider>
+        <div className="w-full px-6 sm:px-10 md:px-16 lg:px-24 py-12 bg-white text-center">
+  <h2 className="text-2xl sm:text-3xl font-bold mb-8">
+    What Our Customers <span className="text-orange-500">Are Saying?</span>
+  </h2>
+
+  <Slider {...settings}>
+    {testimonials.map((item, index) => (
+      <div key={index} className="px-2 sm:px-4">
+        <div className="bg-white p-4 sm:p-6 h-full flex flex-col justify-between border-gray-100 rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
+          <p className="text-left text-sm text-gray-600 mb-4 sm:mb-6">
+            {item.message}
+          </p>
+          <div className="flex items-center mt-auto">
+            <Image
+              src={item.image}
+              alt={item.name}
+              width={50}
+              height={50}
+              className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mr-3 sm:mr-4"
+            />
+            <div className="text-left">
+              <h4 className="text-blue-700 font-semibold text-sm sm:text-base">
+                {item.name}
+              </h4>
+              <p className="text-black text-xs sm:text-sm font-bold">{item.position}</p>
+            </div>
+          </div>
         </div>
+      </div>
+    ))}
+  </Slider>
+</div>
+
     );
 };
