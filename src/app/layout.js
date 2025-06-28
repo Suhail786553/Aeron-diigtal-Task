@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import "./styles/globals.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import Navbar from "./components/layout/Navbar";
 import Footer from './components/layout/Footer';
 
